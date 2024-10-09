@@ -1,7 +1,9 @@
+import { getAllEvents } from "../../dummy-data";
 import EventItem from "./event-item";
 import classes from "./event-list.module.css";
 
 function EventList(props) {
+   
   const { items } = props;
   return (
     <ul className ={classes.list}>
@@ -10,7 +12,8 @@ function EventList(props) {
           key={event.id}
           id={event.id}
           title={event.title}
-          location={event.date}
+          date = {event.date}
+          location={event.location}
           image={event.image}
         />
       ))}
